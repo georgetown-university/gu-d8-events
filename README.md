@@ -66,3 +66,11 @@ The fields being exposed in this view are:
 | Content: RSVP Required | Boolean (yes/no)
 | Content: End Date | Custom (Y-m-d\TH:i:s)
 | Content: Start Date | Custom (Y-m-d\TH:i:s)
+
+## Wireframes
+
+### Admin screen wireframe
+![Admin screen wireframe](_creative/gu-events-admin.jpg)]
+
+### User-facing view wireframe
+![Views wireframe](_creative/gu-events-views.jpg)]
