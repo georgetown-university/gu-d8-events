@@ -1,0 +1,16 @@
+{
+  "name": "Drupal 8 Events Manager",
+  "version": "1.0.0",
+  "description": "Javascript application to create an events management system with a Drupal 8 back-end.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Joni Halabi",
+  "license": "CC-BY-NC-SA-4.0",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
