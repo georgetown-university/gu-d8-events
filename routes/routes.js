@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Home page.
 router.get('/', (req, res) => {
-  res.render('index', {title: 'Home page', body: 'Content goes here'});
+  res.render('index', {title: 'GU Events'});
 });
 
 // Individual event details page.

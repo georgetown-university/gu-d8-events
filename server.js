@@ -1,7 +1,7 @@
 // Setting up the express app.
 const express = require('express');
 const app = express();
-const routes = require('./routes/index');
+const routes = require('./routes/routes');
 
 // Setting up the D8 JSON export
 const request = require('request');
