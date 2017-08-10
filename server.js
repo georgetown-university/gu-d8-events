@@ -8,7 +8,7 @@ const request = require('request');
 const eventsUrl = 'http://localhost:8888/eventsexportall'; // obv not prod-ready.
 
 // Setting up the templating engine.
-app.set('view engine', 'ejs');
+app.set('view engine', 'twig');
 
 // Starting the server.
 const server = app.listen(2000, () => {
