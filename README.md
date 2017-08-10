@@ -70,7 +70,7 @@ The fields being exposed in this view are:
 ## Wireframes
 
 ### Admin screen wireframe
-![Admin screen wireframe](_creative/gu-events-admin.jpg)]
+![Admin screen wireframe](_creative/gu-events-admin.jpg =500x)
 
 ### User-facing view wireframe
-![Views wireframe](_creative/gu-events-views.jpg)]
+![Views wireframe](_creative/gu-events-views.jpg =500x)
