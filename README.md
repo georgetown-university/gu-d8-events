@@ -50,6 +50,7 @@ This app also requires a custom view, which allows Drupal to return the data fro
 * The __Show__ Format has been set to "Fields".
 * The __Path__ has been set to `"/eventsexportall"`.
 * The __Sort Criteria__ has been set to "Content: Start Date (asc)".
+* The __Pager__ has been set to "Display all items".  _(I may come to regret this later.)_
 
 The fields being exposed in this view are:
 
