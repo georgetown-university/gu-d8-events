@@ -1,18 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
+const eventController = require('../controllers/eventController');
+
 // Home page.
 router.get('/', (req, res) => {
-  res.render('index', {title: 'GU Events'});
+  const events = eventController.getEvents(req, res);
+  res.render('index', {title: 'GU Events', events: events});
 });
 
 // Individual event details page.
-router.get('/event/:eventid?', (req, res) => {
-  const eventid = req.params.eventid;
-  res.send(`
-    <h1>${eventid}</h1>
-    <p>About this event</p>
-  `);
+router.get('/event/:eventid', (req, res) => {
+  const event = eventController.getEvent(req, res);
+  const title = 'GU Events: ' + event.title;
+  res.render('event', {title: title, event: event});
 });
 
 // 404 catch-all route.

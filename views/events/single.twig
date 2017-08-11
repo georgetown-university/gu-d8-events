@@ -1,5 +1,3 @@
-{% for event in events %}
-
 <article>
   <h2>
     <a href="/event/{{ event.nid }}">{{ event.title }}</a>
@@ -12,5 +10,3 @@
   <p><strong>Location:</strong> {{ event.field_location }}</p>
   <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
 </article>
-
-{% endfor %}

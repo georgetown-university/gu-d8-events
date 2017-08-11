@@ -67,6 +67,7 @@ The fields being exposed in this view are:
 | Content: RSVP Required | Boolean (yes/no)
 | Content: End Date | Custom (d M Y g:i a)
 | Content: Start Date | Custom (d M Y g:i a)
+| Content: ID | 
 
 ## Wireframes
 
