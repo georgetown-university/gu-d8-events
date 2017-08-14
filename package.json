@@ -12,6 +12,10 @@
   "dependencies": {
     "express": "^4.15.4",
     "request": "^2.81.0",
-    "twig": "^1.10.5"
+    "twig": "^1.10.5",
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-rename": "latest"
   }
 }
