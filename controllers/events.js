@@ -1,11 +1,10 @@
-/* ---
- * Requesting all events data from the D8 JSON export
- */
-
 const request = require('request');
-const eventsUrl = 'http://localhost:8888/events_all'; // obv not prod-ready.
-var events = [];
+const eventsUrl = 'http://localhost:8888/events/'; // obv not prod-ready.
 
+/* ---
+ * Request all events data from the D8 JSON export
+ */
+var events = [];
 request({
   url: eventsUrl,
   json: true
@@ -25,7 +24,6 @@ request({
 /* ---
  * Exported controller functions
  */
-
 exports.getEvents = function(req, res) {
   return events;
 }

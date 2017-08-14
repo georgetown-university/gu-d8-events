@@ -48,8 +48,12 @@ The "Location" field uses the __Locations__ taxonomy, which is is a list of loca
 This app also requires a custom view, which allows Drupal to return the data from the Events content type as a JSON object.  A few customizations of note:
 
 * The __Show__ Format has been set to "Fields".
-* The __Path__ has been set to `"/eventsexportall"`.
+* The __Path__ has been set to `"/events/"`.
 * The __Sort Criteria__ has been set to "Content: Start Date (asc)".
+* The __Filter Criteria__ has been set to:
+  * "Content: Publishing status (= Yes)"
+  * "Content: Content type (= Event)"
+  * "Content: Start Date (>= +0 minutes)"
 * The __Pager__ has been set to "Display all items".  _(I may come to regret this later.)_
 
 The fields being exposed in this view are:
@@ -67,7 +71,7 @@ The fields being exposed in this view are:
 | Content: RSVP Required | Boolean (yes/no)
 | Content: End Date | Custom (d M Y g:i a)
 | Content: Start Date | Custom (d M Y g:i a)
-| Content: ID | 
+| Content: ID |
 
 ## Wireframes
 
