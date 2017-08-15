@@ -11,9 +11,21 @@
     {% if event.formatted_end_date %}
     <p><strong>End date:</strong> {{ event.formatted_end_date }}</p>
     {% endif %}
-    
+
     <p><strong>Location:</strong> {{ event.field_location }}</p>
     <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
+
+    {% if event.field_rsvp_required == true %}
+    <h3>RSVP here!</h3>
+
+    <form id="rsvp">
+      <label for="name">Name</label>
+      <input id="name" required>
+
+      <label for="netid">NetID</label>
+      <input id="netid" required>
+    </form>
+    {% endif %}
 
     <p><a href="/" class="btn back">Go back</a></p>
   </div>

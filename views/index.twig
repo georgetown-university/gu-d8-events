@@ -5,7 +5,7 @@
     <div class="container">
       <h2><a href="/event/{{ event.nid }}">{{ event.title }}</a></h2>
       <p>{{ event.formatted_date }}</p>
-      {{ event.body }}
+      <p>{{ event.body | striptags | slice(0, 100) ~ '...' }}</p>
       <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
     </div>
   </article>
