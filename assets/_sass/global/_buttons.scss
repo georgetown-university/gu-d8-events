@@ -1,0 +1,22 @@
+.btn {
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  &.back {
+    background: $red;
+    color: $white;
+
+    &:before {
+      content: '«';
+      font-size: 1.2rem;
+      margin-right: 0.35rem;
+    }
+
+    &:hover {
+      background: darken($red, 10%);
+    }
+  }
+}

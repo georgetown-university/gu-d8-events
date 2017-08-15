@@ -1,5 +1,14 @@
 {% include 'partials/header.twig' %}
 
-{% include 'events/all.twig' %}
+{% for event in events %}
+  <article class="event-blurb" aria-label="{{ event.title }}">
+    <div class="container">
+      <h2><a href="/event/{{ event.nid }}">{{ event.title }}</a></h2>
+      <p>{{ event.field_date }}</p>
+      {{ event.body }}
+      <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
+    </div>
+  </article>
+{% endfor %}
 
 {% include 'partials/footer.twig' %}

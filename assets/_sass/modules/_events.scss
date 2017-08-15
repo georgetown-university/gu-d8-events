@@ -1,0 +1,5 @@
+.event-blurb {
+  &:nth-of-type(2n) {
+    background: lighten($gray_light, 10%);
+  }
+}

@@ -1,2 +1,8 @@
 @import 'global/reset';
+@import 'global/colors';
+@import 'global/typography';
 @import 'global/layout';
+@import 'global/buttons';
+
+@import 'modules/header';
+@import 'modules/events';

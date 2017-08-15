@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 996px;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+main, article {
+  padding: 1rem 0;
+}

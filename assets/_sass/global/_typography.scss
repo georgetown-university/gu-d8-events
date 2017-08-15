@@ -1,0 +1,35 @@
+$serif: Georgia, "Times New Roman", serif;
+$sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $sans;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: $red;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: darken($red, 10%);
+    text-decoration: none;
+  }
+}
+
+strong {
+  font-weight: bold;
+}

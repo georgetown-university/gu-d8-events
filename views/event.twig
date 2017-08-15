@@ -1,5 +1,18 @@
 {% include 'partials/header.twig' %}
 
-{% include 'events/single.twig' %}
+<article aria-label="{{ event.title }}">
+  <div class="container">
+    <h2>{{ event.title }}</h2>
+
+    {{ event.body }}
+
+    <p><strong>Start date:</strong> {{ event.field_date }}</p>
+    <p><strong>End date:</strong> {{ event.field_end_date }}</p>
+    <p><strong>Location:</strong> {{ event.field_location }}</p>
+    <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
+
+    <p><a href="/" class="btn back">Go back</a></p>
+  </div>
+</article>
 
 {% include 'partials/footer.twig' %}
