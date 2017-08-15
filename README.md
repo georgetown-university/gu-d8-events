@@ -58,12 +58,13 @@ This app also requires a custom view, which allows Drupal to return the data fro
 
 The fields being exposed in this view are:
 
-| Field | Formatter
+| Field | Formatter | Alias
 | ------- | -------
 | Content: Title | Plain text
 | Content: Attendee Limit | Default
 | Content: Body | value
-| Content: Hosted by | Label
+| Content: Hosted by | Label | field_host
+| Content: Hosted by (id) | Entity ID | field_host_id
 | Content: Location | Label
 | Content: Path |
 | Content: Public Event | Boolean (yes/no)

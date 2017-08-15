@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const siteTitle = 'GU Events';
+
 /* ---
  * Declare all controllers
  */
@@ -12,7 +14,7 @@ const eventsController = require('../controllers/events');
  */
 router.get('/', (req, res) => {
   const events = eventsController.getEvents(req, res);
-  res.render('index', {title: 'GU Events', events: events});
+  res.render('index', {title: siteTitle, events: events});
 });
 
 /* ---
@@ -20,8 +22,17 @@ router.get('/', (req, res) => {
  */
 router.get('/event/:eventid', (req, res) => {
   const event = eventsController.getEvent(req, res);
-  const title = 'GU Events: ' + event.title;
+  const title = siteTitle + ': ' + event.title;
   res.render('event', {title: title, event: event});
+});
+
+/* ---
+ * Host page.
+ */
+router.get('/host/:hostid', (req, res) => {
+  var [events, host] = eventsController.getHostEvents(req, res);
+  const title = siteTitle + ': Events by ' + host;
+  res.render('host', {title: title, events: events});
 });
 
 /* ---

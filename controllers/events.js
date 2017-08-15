@@ -6,7 +6,7 @@ const eventsUrl = 'http://localhost:8888/events/'; // obv not prod-ready.
  */
 function formatDate(d) {
   if (!d) { return false; }
-  
+
   const dateOptions = { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' };
   const date = new Date(d);
   return date.toLocaleString('en-us', dateOptions);
@@ -56,4 +56,19 @@ exports.getEvent = function(req, res) {
   });
 
   return event;
+}
+
+exports.getHostEvents = function(req, res) {
+  const hostid = req.params.hostid;
+
+  let filtered = [];
+  events.forEach((e) => {
+    if (e.field_host_id == hostid) {
+      filtered = filtered.concat(e);
+    }
+  });
+
+  const host = filtered[0].field_host;
+
+  return [filtered, host];
 }

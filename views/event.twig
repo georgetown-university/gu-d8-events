@@ -13,7 +13,11 @@
     {% endif %}
 
     <p><strong>Location:</strong> {{ event.field_location }}</p>
-    <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
+    
+    <p>
+      <strong>Hosted by:</strong>
+      <a href="/host/{{ event.field_host_id }}">{{ event.field_host }}</a>
+    </p>
 
     {% if event.field_rsvp_required == true %}
     <h3>RSVP here!</h3>
