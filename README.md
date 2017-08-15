@@ -69,8 +69,8 @@ The fields being exposed in this view are:
 | Content: Public Event | Boolean (yes/no)
 | Content: Publishing status | Boolean (true/false)
 | Content: RSVP Required | Boolean (yes/no)
-| Content: End Date | Custom (d M Y g:i a)
-| Content: Start Date | Custom (d M Y g:i a)
+| Content: End Date | Plain
+| Content: Start Date | Plain
 | Content: ID |
 
 ## Wireframes

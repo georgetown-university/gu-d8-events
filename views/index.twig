@@ -4,7 +4,7 @@
   <article class="event-blurb" aria-label="{{ event.title }}">
     <div class="container">
       <h2><a href="/event/{{ event.nid }}">{{ event.title }}</a></h2>
-      <p>{{ event.field_date }}</p>
+      <p>{{ event.formatted_date }}</p>
       {{ event.body }}
       <p><strong>Hosted by:</strong> {{ event.field_organizations }}</p>
     </div>

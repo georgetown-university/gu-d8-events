@@ -2,6 +2,18 @@ const request = require('request');
 const eventsUrl = 'http://localhost:8888/events/'; // obv not prod-ready.
 
 /* ---
+ * Helper functions to format dates.
+ */
+function formatDate(d) {
+  if (!d) { return false; }
+  
+  const dateOptions = { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' };
+  const date = new Date(d);
+  return date.toLocaleString('en-us', dateOptions);
+}
+
+
+/* ---
  * Request all events data from the D8 JSON export
  */
 var events = [];
@@ -17,8 +29,13 @@ request({
   }
 
   // Create an array of event data.
-  body.forEach((item) => { events = events.concat(item); });
+  body.forEach((item) => {
+    item.formatted_date = formatDate(item.field_date);
+    item.formatted_end_date = formatDate(item.field_end_date);
+    events = events.concat(item);
+  });
 });
+
 
 
 /* ---
