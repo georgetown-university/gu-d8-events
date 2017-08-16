@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
  */
 router.get('/filter', (req, res) => {
   const events = eventsController.getFilteredEvents(req, res);
-  res.render('events', {events: events});
+  res.render('partials/events', {events: events});
 });
 
 /* ---

@@ -1,8 +1,13 @@
 const request = require('request');
 const eventsUrl = 'http://localhost:8888/events/'; // obv not prod-ready.
 
+
+/* ---
+ * Min and max dates, for use when filtering.
+ */
 const minDate = new Date(-8640000000000000);
 const maxDate = new Date(8640000000000000);
+
 
 /* ---
  * Helper functions to format dates.
