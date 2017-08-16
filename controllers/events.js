@@ -1,6 +1,9 @@
 const request = require('request');
 const eventsUrl = 'http://localhost:8888/events/'; // obv not prod-ready.
 
+const minDate = new Date(-8640000000000000);
+const maxDate = new Date(8640000000000000);
+
 /* ---
  * Helper functions to format dates.
  */
@@ -43,6 +46,31 @@ request({
  */
 exports.getEvents = function(req, res) {
   return events;
+}
+
+exports.getFilteredEvents = function(req, res) {
+  // Get form data.
+  const daterange = req.query.daterange;
+  const startdate = (req.query.startdate) ? new Date(req.query.startdate) : minDate;
+  const enddate = (req.query.enddate) ? new Date(req.query.enddate) : maxDate;
+
+  // If user asks for all dates, don't bother filtering.
+  if (daterange == 'all') {
+    return events;
+  }
+
+  // Otherwise, filter by date range!
+  let filtered = [];
+  events.forEach((e) => {
+    let fieldDate = new Date(e.field_date);
+    let fieldEndDate = new Date(e.field_end_date);
+
+    if (fieldDate >= startdate && fieldEndDate <= enddate) {
+      filtered = filtered.concat(e);
+    }
+  });
+
+  return filtered;
 }
 
 exports.getEvent = function(req, res) {

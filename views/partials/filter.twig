@@ -1,0 +1,27 @@
+<section aria-label="Filter events" class="filters">
+  <form id="filter" class="container" action="/" method="post">
+    <h2>Filter Events by Date</h2>
+
+    <fieldset>
+      <input name="daterange" type="radio" checked value="all">
+      <label>All</label>
+    </fieldset>
+
+    <fieldset>
+      <input name="daterange" type="radio" value="range">
+      <label>Specific Dates</label>
+    </fieldset>
+
+    <fieldset class="dates">
+      <label>Start Date</label>
+      <input name="startdate" type="date">
+    </fieldset>
+
+    <fieldset class="dates">
+      <label>End Date</label>
+      <input name="enddate" type="date">
+    </fieldset>
+
+    <input type="submit" value="Filter" class="btn submit">
+  </form>
+</section>

@@ -18,6 +18,14 @@ router.get('/', (req, res) => {
 });
 
 /* ---
+ * Filtering the home page.
+ */
+router.get('/filter', (req, res) => {
+  const events = eventsController.getFilteredEvents(req, res);
+  res.render('events', {events: events});
+});
+
+/* ---
  * Individual event details page.
  */
 router.get('/event/:eventid', (req, res) => {

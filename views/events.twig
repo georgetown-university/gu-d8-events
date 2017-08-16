@@ -1,0 +1,15 @@
+<div id="events">
+  {% for event in events %}
+    <article class="event-blurb" aria-label="{{ event.title }}">
+      <div class="container">
+        <h2><a href="/event/{{ event.nid }}">{{ event.title }}</a></h2>
+        <p>{{ event.formatted_date }}</p>
+        <p>{{ event.body | striptags | slice(0, 100) ~ '...' }}</p>
+        <p>
+          <strong>Hosted by:</strong>
+          <a href="/host/{{ event.field_host_id }}">{{ event.field_host }}</a>
+        </p>
+      </div>
+    </article>
+  {% endfor %}
+</div>
