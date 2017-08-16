@@ -13,14 +13,15 @@
     {% endif %}
 
     <p><strong>Location:</strong> {{ event.field_location }}</p>
-    
+
     <p>
       <strong>Hosted by:</strong>
       <a href="/host/{{ event.field_host_id }}">{{ event.field_host }}</a>
     </p>
 
-    {% if event.field_rsvp_required == true %}
+    {% if event.field_rsvp_required == 'Yes' %}
     <h3>RSVP here!</h3>
+    <p>Except don't, because I don't work yet.</p>
 
     <form id="rsvp">
       <label for="name">Name</label>
@@ -28,6 +29,10 @@
 
       <label for="netid">NetID</label>
       <input id="netid" required>
+
+      <p>
+        <input type="submit" class="btn submit" value="RSVP!">
+      </p>
     </form>
     {% endif %}
 
